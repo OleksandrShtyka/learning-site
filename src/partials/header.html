@@ -1,0 +1,139 @@
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="#" aria-label="Homepage">
+      <span class="logo__dot"></span>
+      <span class="logo__text">Null<span class="logo__accent">UI</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#">Test 1</a></li>
+        <li><a class="nav__link" href="#">Test 2</a></li>
+        <li><a class="nav__link" href="#">Test 3</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn--ghost" data-open="login">Log In</button>
+      <button class="btn btn--primary" data-open="register">Sign Up</button>
+    </div>
+
+    <div
+      id="sr-toast"
+      class="sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <button
+      class="burger"
+      id="header-burger"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile panel -->
+  <div class="mobile" id="mobile-menu" hidden>
+    <nav class="mobile__nav" aria-label="Mobile">
+      <a class="mobile__link" href="#">Test 1</a>
+      <a class="mobile__link" href="#">Test 2</a>
+      <a class="mobile__link" href="#">Test 3</a>
+    </nav>
+    <div class="mobile__actions">
+      <button class="btn btn--ghost" data-open="login">Log In</button>
+      <button class="btn btn--primary" data-open="register">Sign Up</button>
+    </div>
+  </div>
+</header>
+
+<!-- Register Modal -->
+<div
+  id="register-window"
+  class="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="register-title"
+  hidden
+>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" data-close aria-label="Close dialog">✕</button>
+    <h2 id="register-title" class="modal__title">Create your account</h2>
+    <form class="form" novalidate>
+      <label class="field">
+        <span class="field__label">Username</span>
+        <input
+          class="field__input"
+          type="text"
+          name="username"
+          autocomplete="username"
+          required
+        />
+      </label>
+      <label class="field">
+        <span class="field__label">Email</span>
+        <input
+          class="field__input"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+        <small class="field__error" id="err-username" hidden></small>
+      </label>
+      <label class="field">
+        <span class="field__label">Password</span>
+        <input
+          class="field__input"
+          type="password"
+          name="password"
+          autocomplete="new-password"
+          required
+          minlength="6"
+        />
+      </label>
+      <button class="btn btn--primary btn--block" type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div
+  id="login-window"
+  class="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="login-title"
+  hidden
+>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" data-close aria-label="Close dialog">✕</button>
+    <h2 id="login-title" class="modal__title">Welcome back</h2>
+    <form class="form" novalidate>
+      <label class="field">
+        <span class="field__label">Username or Email</span>
+        <input
+          class="field__input"
+          type="text"
+          name="login"
+          autocomplete="username email"
+          required
+        />
+      </label>
+      <label class="field">
+        <span class="field__label">Password</span>
+        <input
+          class="field__input"
+          type="password"
+          name="password"
+          autocomplete="current-password"
+          required
+        />
+      </label>
+      <button class="btn btn--primary btn--block" type="submit">Log In</button>
+    </form>
+  </div>
+</div>
